@@ -12,9 +12,6 @@ jobs:
   flutter-checks:
     name: Flutter Testing and Analysis
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./HOLLY_BIZ_DEMO
 
     steps:
       - name: Checkout Repository
