@@ -1,4 +1,6 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
+
+import 'event_financial_management.dart';
 
 // Shared helper dialog to Add or Edit Income / Expense records
 void showRecordDialog(
