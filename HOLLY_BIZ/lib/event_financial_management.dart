@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'financial_record.dart';
+import 'financial record.dart';
 
 class Event {
   final String name;
