@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'event_financial_management.dart';
-
 // Shared helper dialog to Add or Edit Income / Expense records
 void showRecordDialog(
   BuildContext context, {
@@ -108,8 +106,9 @@ void showRecordDialog(
                 );
 
                 if (pickedDate != null) {
-                  transactionDateController.text =
-                      pickedDate.toString().split(' ')[0];
+                  transactionDateController.text = pickedDate.toString().split(
+                    ' ',
+                  )[0];
                   transactionDate = pickedDate;
                 }
               },
@@ -120,10 +119,7 @@ void showRecordDialog(
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context),
-          child: Text(
-            'Cancel',
-            style: TextStyle(color: Colors.grey.shade700),
-          ),
+          child: Text('Cancel', style: TextStyle(color: Colors.grey.shade700)),
         ),
         ElevatedButton(
           style: ElevatedButton.styleFrom(
@@ -140,7 +136,8 @@ void showRecordDialog(
 
             if (description.isNotEmpty && amount > 0 && category.isNotEmpty) {
               final entry = LedgerEntry(
-                id: existingEntry?.id ??
+                id:
+                    existingEntry?.id ??
                     DateTime.now().millisecondsSinceEpoch.toString(),
                 eventName: eventName,
                 description: description,
@@ -183,11 +180,7 @@ class FinancialDashboardPage extends StatefulWidget {
 
 class _FinancialDashboardPageState extends State<FinancialDashboardPage> {
   void _showAddRecordDialog(bool isIncome) {
-    showRecordDialog(
-      context,
-      eventName: widget.event.name,
-      isIncome: isIncome,
-    );
+    showRecordDialog(context, eventName: widget.event.name, isIncome: isIncome);
   }
 
   @override
@@ -570,10 +563,7 @@ class RecordsListPage extends StatelessWidget {
                     showIncome
                         ? 'No income records found.'
                         : 'No expense records found.',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.grey.shade600,
-                    ),
+                    style: TextStyle(fontSize: 16, color: Colors.grey.shade600),
                   ),
                 ],
               ),
