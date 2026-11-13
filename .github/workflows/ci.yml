@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./HOLLY_BIZ
+        working-directory: ./HOLLY_BIZ_DEMO
 
     steps:
       - name: Checkout Repository
